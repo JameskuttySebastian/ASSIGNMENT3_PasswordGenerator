@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Password Generator</title>
+</head>
+
+<body>
+
+    <h1>Password Generator</h1>
+    <div class="container">
+
+        <div class="row">
+            <div class="col-sm-12">
+                <h2>Generate a password</h2>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12">
+                <hr>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12">
+                <textarea class="form-control textArea" id="textArea" rows="5"
+                    placeholder="Your Secure Password"></textarea>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12">
+                <hr>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6 text-center">
+                <button type="button" class="form-control button" 
+                onclick="askDetails()" id="btnGenerate">Generate Password</button>
+            </div>
+
+            <div class="col-sm-6 text-center">
+            <button type="button" class="form-control button" id="btnCopy">Copy to Clipboard</button>
+
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+    <script type="text/javascript" src="assets/js/script.js"></script>
+    <!-- scripts are used in this section in order to make pageload faster -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+
+</html>
