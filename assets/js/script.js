@@ -13,9 +13,9 @@ var nums = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 // function eraceText(){
 //     document.getElementById("textArea").innerHTML = "Your Secure Password";
 // }
-
 function askDetails() {
-
+    document.getElementById("textArea").innerHTML =''; 
+    console.log(document.getElementById("textArea").innerHTML);//not working due to some reason
     var pswdLength = prompt("What is the length of the password (between 8 and 128 characters)?...");
     //checking for user cancellation
     if (pswdLength === null) {
@@ -68,11 +68,11 @@ function askDetails() {
             if (charArray[j][0] === 32) {
                 var num = parseInt(charArray[j][k]);
                 pwd = pwd + String.fromCharCode(num);
-                console.log("array : " + charArray[j], charArray[j][k], pwd);
+                // console.log("array : " + charArray[j], charArray[j][k], pwd);
             }
             else {
                 pwd = pwd + charArray[j][k];
-                console.log("array : " + charArray[j], charArray[j][k], pwd);
+                // console.log("array : " + charArray[j], charArray[j][k], pwd);
             }
             // console.log(pwd);
             // console.log(pwd.length);      
