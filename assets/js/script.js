@@ -6,9 +6,16 @@ var capLetters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M
 var smlLetters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 var nums = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 
+// function functionCall(){
+//     eraceText();
+//     askDetails();
+// }
+// function eraceText(){
+//     document.getElementById("textArea").innerHTML = "Your Secure Password";
+// }
 
 function askDetails() {
-    document.getElementById("textArea").innerHTML = "";
+
     var pswdLength = prompt("What is the length of the password (between 8 and 128 characters)?...");
     //checking for user cancellation
     if (pswdLength === null) {
@@ -37,38 +44,54 @@ function askDetails() {
                 break;
             }
         }
-                if (charOptions !== null && charOptions.includes("sp")) {
-                    charArray.push(spcCharArray);
-                    // console.log(charArray);
-                };
-                if (charOptions !== null && charOptions.includes("cl")) {
-                    charArray.push(capLetters);
-                    // console.log(charArray);
-                };
-                if (charOptions !== null && charOptions.includes("sl")) {
-                    charArray.push(smlLetters);
-                    // console.log(charArray);
-                };
-                if (charOptions !== null && charOptions.includes("nm")) {
-                    charArray.push(nums);
-                    // console.log(charArray);
-                };
-                var pwd = "";
-            for (var i = 0; i < parseInt(pswdLength); i++){
-                    var j = Math.floor(Math.random() * charArray.length);
-                    var k = Math.floor(Math.random() * charArray[j].length);
-                    if (j == 0){
-                        var num = parseInt(charArray[0][k]);
-                        pwd = pwd + String.fromCharCode(num);
-                        // console.log(charArray[j],charArray[j][k],pwd);
-                    }
-                    else {
-                        pwd = pwd + charArray[j][k];
-                        // console.log(charArray[j],charArray[j][k],pwd);
-                    }
-                    // console.log(pwd);
-                    // console.log(pwd.length);      
+        if (charOptions !== null && charOptions.includes("sp")) {
+            charArray.push(spcCharArray);
+            // console.log(charArray);
+        }
+        if (charOptions !== null && charOptions.includes("cl")) {
+            charArray.push(capLetters);
+            // console.log(charArray);
+        }
+        if (charOptions !== null && charOptions.includes("sl")) {
+            charArray.push(smlLetters);
+            // console.log(charArray);
+        }
+        if (charOptions !== null && charOptions.includes("nm")) {
+            charArray.push(nums);
+            // console.log(charArray);
+        }
+        var pwd = "";
+        console.log(charArray);
+        for (var i = 0; i < parseInt(pswdLength); i++) {
+            var j = Math.floor(Math.random() * charArray.length);
+            var k = Math.floor(Math.random() * charArray[j].length);
+            if (charArray[j][0] === 32) {
+                var num = parseInt(charArray[j][k]);
+                pwd = pwd + String.fromCharCode(num);
+                console.log("array : " + charArray[j], charArray[j][k], pwd);
             }
-            document.getElementById("textArea").innerHTML = pwd;
+            else {
+                pwd = pwd + charArray[j][k];
+                console.log("array : " + charArray[j], charArray[j][k], pwd);
+            }
+            // console.log(pwd);
+            // console.log(pwd.length);      
+        }
+        document.getElementById("textArea").innerHTML = pwd;
     }
+}
+
+function copyText() {
+    /* Get the text field */
+    var copyText = document.getElementById("textArea");
+
+    /* Select the text field */
+    copyText.select();
+    copyText.setSelectionRange(0, 99999); /*For mobile devices*/
+
+    /* Copy the text inside the text field */
+    document.execCommand("copy");
+
+    /* Alert the copied text */
+    alert("Copied the text: " + copyText.value);
 }
