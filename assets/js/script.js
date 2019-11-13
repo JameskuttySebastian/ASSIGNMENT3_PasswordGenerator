@@ -6,15 +6,17 @@ var capLetters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M
 var smlLetters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 var nums = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 
-// function functionCall(){
-//     eraceText();
-//     askDetails();
-// }
-// function eraceText(){
-//     document.getElementById("textArea").innerHTML = "Your Secure Password";
-// }
-function askDetails() {
-    document.getElementById("textArea").innerHTML =''; 
+function functionCall(){
+    eraceText();
+    askDetails();
+}
+var eraceText = function (){
+    document.getElementById("textArea").innerHTML = "";
+    console.log("eraceText function");
+}
+
+var askDetails = function () {
+    // document.getElementById("textArea").innerHTML =''; 
     console.log(document.getElementById("textArea").innerHTML);//not working due to some reason
     var pswdLength = prompt("What is the length of the password (between 8 and 128 characters)?...");
     //checking for user cancellation
@@ -81,7 +83,7 @@ function askDetails() {
     }
 }
 
-function copyText() {
+var copyText = function () {
     /* Get the text field */
     var copyText = document.getElementById("textArea");
 
