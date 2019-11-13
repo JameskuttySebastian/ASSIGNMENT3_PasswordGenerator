@@ -9,7 +9,7 @@
     . **sp** for special characters \
     . **cl** for capital letters \
     . **sl** for small letters \
-    . **sp** for numbers \
+    . **sp** for numbers 
     
 3. System will generate a password and will show it on the text area.
 

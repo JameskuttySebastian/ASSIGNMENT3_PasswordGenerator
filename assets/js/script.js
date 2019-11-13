@@ -41,6 +41,7 @@ var askDetails = function () {
             // console.log(charOptions);
             // console.log(!charOptions.includes("sp"));
             var charOptions = prompt("What are the characters to include?.... sp: special characters, cl: capital lettes, sl: small letters and nm: numbers. Use \",\" to separate selection.");
+            charOptions = charOptions.toLowerCase();
             if (charOptions === null) {
                 alert("You cancelled!....");
                 break;
