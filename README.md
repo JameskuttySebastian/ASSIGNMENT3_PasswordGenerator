@@ -6,10 +6,10 @@
 
 2. If user enters a number within the range, system will show another prompt to enter what are the combination of characters to use for the password. User can enter at any order but system will prompt again if there is none selected.
 
-    . **sp** for special characters
-    . **cl** for capital letters
-    . **sl** for small letters
-    . **sp** for numbers
+    . **sp** for special characters \
+    . **cl** for capital letters \
+    . **sl** for small letters \
+    . **sp** for numbers \
     
 3. System will generate a password and will show it on the text area.
 
